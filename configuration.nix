@@ -134,8 +134,12 @@
 
   # Programs enabled on the system.
   programs = {
-    hyprland.enable = true;
-    xfconf.enable = true;
+    hyprland = {
+      enable = true;
+
+      withUWSM = true;
+      xwayland.enable = true;
+    };
 
     firefox = {
       enable = true;
@@ -227,6 +231,8 @@
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
     };
+
+    xfconf.enable = true;
   };
 
   # Allow unfree packages
@@ -261,13 +267,20 @@
     enableSSHSupport = true;
   };
 
-  # Configure default terminal emulator
-  xdg.terminal-exec = {
-    enable = true;
-    settings = {
-      default = [
-        "kitty.desktop"
-      ];
+  # Configure Xdg variables.
+  xdg = {
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
+    };
+
+    terminal-exec = {
+      enable = true;
+      settings = {
+        default = [
+          "kitty.desktop"
+        ];
+      };
     };
   };
 
@@ -279,6 +292,10 @@
         command = "start-hyprland -- -c /etc/greetd/hyprland.conf";
         user = "marcos";
       };
+    };
+
+    dbus = {
+      implementation = "broker";
     };
 
     pipewire = {

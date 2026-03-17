@@ -12,7 +12,6 @@
     # System
     greetd
     regreet
-    dbus
     pipewire
     pulseaudio
     seahorse
