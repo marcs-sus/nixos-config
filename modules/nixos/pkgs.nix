@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     tuigreet
     pipewire
+    pavucontrol
     brightnessctl
     trash-cli
     file-roller
@@ -18,6 +19,7 @@
     curl
     ripgrep
     git
+    gh
     fastfetch
     starship
     bash-completion
