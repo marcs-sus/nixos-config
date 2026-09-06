@@ -6,6 +6,7 @@
     ./boot.nix
     ./environment.nix
     ./fonts.nix
+    ./hardware.nix
     ./networking.nix
     ./pkgs.nix
     ./programs.nix

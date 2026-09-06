@@ -8,6 +8,7 @@
     pipewire
     pavucontrol
     brightnessctl
+    lact
     trash-cli
     file-roller
     nixfmt
@@ -33,5 +34,6 @@
     ente-auth
     gamemode
     xwayland-satellite
+    xdg-desktop-portal-gtk
   ];
 }
