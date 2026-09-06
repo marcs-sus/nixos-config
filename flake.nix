@@ -11,6 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Niri
+    niri = {
+      url = "github:sodiboo/niri-flake";
+    };
+
     # Noctalia
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
