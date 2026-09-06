@@ -8,8 +8,13 @@
     inputs.niri.nixosModules.niri
   ];
 
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+
   programs = {
-    niri.enable = true;
+    niri = {
+      enable = true;
+      package = pkgs.niri-unstable;
+    };
 
     thunar = {
       enable = true;

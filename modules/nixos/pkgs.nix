@@ -22,8 +22,6 @@
     git
     gh
     fastfetch
-    starship
-    bash-completion
     nix-bash-completions
     brave-origin
     vesktop
