@@ -1,0 +1,35 @@
+{
+  pkgs,
+  ...
+}:
+{
+  environment.systemPackages = with pkgs; [
+    tuigreet
+    pipewire
+    brightnessctl
+    trash-cli
+    file-roller
+    nixfmt
+    kitty
+    vim
+    tree
+    neovim
+    wget
+    curl
+    ripgrep
+    git
+    fastfetch
+    starship
+    bash-completion
+    nix-bash-completions
+    brave-origin
+    vesktop
+    ferdium
+    vscodium
+    mpv
+    keepassxc
+    ente-auth
+    gamemode
+    xwayland-satellite
+  ];
+}
