@@ -10,26 +10,6 @@
     ../../modules/nixos/default.nix
   ];
 
-  # Temporary overlay `libdisplay-info_0_2` has been removed
-  nixpkgs.overlays = [
-    (final: prev: {
-      libdisplay-info_0_2 = prev.libdisplay-info.overrideAttrs (old: rec {
-        version = "0.2.0";
-        src = final.fetchFromGitLab {
-          domain = "gitlab.freedesktop.org";
-          owner = "emersion";
-          repo = "libdisplay-info";
-          rev = version;
-          hash = "sha256-6xmWBrPHghjok43eIDGeshpUEQTuwWLXNHg7CnBUt3Q=";
-        };
-      });
-
-      niri = prev.niri.override {
-        libdisplay-info = final.libdisplay-info_0_2;
-      };
-    })
-  ];
-
   networking.hostName = "desktop";
   time.timeZone = "America/Sao_Paulo";
 
@@ -60,6 +40,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "gamemode"
     ];
   };
 

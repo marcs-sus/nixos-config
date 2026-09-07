@@ -5,7 +5,7 @@
 {
   environment.systemPackages = with pkgs; [
     tuigreet
-    pipewire
+    pulseaudio
     pavucontrol
     brightnessctl
     lact

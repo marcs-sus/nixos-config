@@ -1,9 +1,14 @@
 {
   pkgs,
+  inputs,
   lib,
   ...
 }:
 {
+  imports = [
+    inputs.lanzaboote.nixosModules.lanzaboote
+  ];
+
   boot = {
     loader = {
       # systemd-boot.enable = true;

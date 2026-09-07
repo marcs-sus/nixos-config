@@ -20,7 +20,6 @@
     # Niri
     niri = {
       url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Noctalia
@@ -40,7 +39,6 @@
       self,
       nixpkgs,
       home-manager,
-      lanzaboote,
       ...
     }:
     {
@@ -54,7 +52,6 @@
           modules = [
             ./hosts/desktop/configuration.nix
 
-            lanzaboote.nixosModules.lanzaboote
             home-manager.nixosModules.default
             {
               home-manager = {
