@@ -33,5 +33,6 @@
     gamemode
     xwayland-satellite
     xdg-desktop-portal-gtk
+    sbctl
   ];
 }

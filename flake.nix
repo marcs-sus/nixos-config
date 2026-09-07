@@ -11,6 +11,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Lanzaboote
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Niri
     niri = {
       url = "github:sodiboo/niri-flake";
@@ -34,6 +40,7 @@
       self,
       nixpkgs,
       home-manager,
+      lanzaboote,
       ...
     }:
     {
@@ -47,6 +54,7 @@
           modules = [
             ./hosts/desktop/configuration.nix
 
+            lanzaboote.nixosModules.lanzaboote
             home-manager.nixosModules.default
             {
               home-manager = {
