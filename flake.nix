@@ -19,7 +19,7 @@
 
     # Niri
     niri = {
-      url = "github:sodiboo/niri-flake";
+      url = "github:epireyn/niri-flake";
     };
 
     # Noctalia
