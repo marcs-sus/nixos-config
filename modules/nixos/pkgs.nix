@@ -30,8 +30,10 @@
     mpv
     keepassxc
     ente-auth
+    prismlauncher
     gamemode
     xdg-desktop-portal-gtk
+    xwayland-satellite
     sbctl
   ];
 }
