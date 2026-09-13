@@ -3,11 +3,18 @@
 }:
 {
   networking = {
+    hostName = "desktop";
+
     networkmanager.enable = true;
     nftables.enable = true;
-    firewall = {
-      # allowedTCPPorts = [ ... ];
-      # allowedUDPPorts = [ ... ];
+    firewall = rec {
+      allowedTCPPortRanges = [
+        {
+          from = 1714;
+          to = 1764;
+        }
+      ];
+      allowedUDPPortRanges = allowedTCPPortRanges;
     };
 
     # Configure network proxy if necessary

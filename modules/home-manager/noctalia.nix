@@ -1,5 +1,4 @@
 {
-  pkgs,
   inputs,
   ...
 }:
@@ -13,12 +12,6 @@
     systemd.enable = true;
 
     settings = {
-      theme = {
-        mode = "dark";
-        source = "builtin";
-        builtin = "Tokyo-Night";
-      };
-
       wallpaper = {
         enabled = true;
         # default.path = "/path/to/wallpapers/wallpaper.png";

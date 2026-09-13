@@ -11,7 +11,6 @@
     lact
     trash-cli
     file-roller
-    nixfmt
     kitty
     vim
     tree
@@ -35,5 +34,7 @@
     xdg-desktop-portal-gtk
     xwayland-satellite
     sbctl
+    nixfmt
+    nil
   ];
 }
