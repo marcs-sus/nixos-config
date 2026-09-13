@@ -25,8 +25,10 @@
     brave-origin
     vesktop
     ferdium
-    vscodium
+    vscodium.fhs
     mpv
+    imv
+    obsidian
     keepassxc
     ente-auth
     prismlauncher
@@ -34,6 +36,7 @@
     xdg-desktop-portal-gtk
     xwayland-satellite
     sbctl
+    shellcheck
     nixfmt
     nil
   ];

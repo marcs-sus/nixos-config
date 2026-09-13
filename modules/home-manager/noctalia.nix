@@ -14,7 +14,7 @@
     settings = {
       wallpaper = {
         enabled = true;
-        # default.path = "/path/to/wallpapers/wallpaper.png";
+        default.path = "/home/marcos/Pictures/Wallpapers";
       };
 
       shell = {
