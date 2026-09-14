@@ -8,6 +8,7 @@
     ./fonts.nix
     ./hardware.nix
     ./networking.nix
+    ./nix.nix
     ./pkgs.nix
     ./programs.nix
     ./security.nix
