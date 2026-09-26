@@ -54,6 +54,7 @@
       };
     };
 
+    localsend.enable = true;
     dconf.enable = true;
   };
 }

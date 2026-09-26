@@ -27,6 +27,7 @@
     ferdium
     vscodium.fhs
     mpv
+    vlc
     imv
     obsidian
     keepassxc
