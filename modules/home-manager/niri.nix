@@ -418,6 +418,8 @@
         "Print".action.spawn-sh = "noctalia msg screenshot-fullscreen";
         "Ctrl+Print".action.spawn-sh = "noctalia msg screenshot-region";
 
+        "XF86PowerOff".action.spawn-sh = "noctalia msg panel-toggle session";
+
         "Mod+Escape" = {
           allow-inhibiting = false;
           action.toggle-keyboard-shortcuts-inhibit = [ ];
