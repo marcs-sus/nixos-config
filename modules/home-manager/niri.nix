@@ -165,7 +165,7 @@
         {
           matches = [
             {
-              app-id = "vesktop|Ferdium$";
+              app-id = "vesktop|ferdium$";
             }
             {
               app-id = "^org\\.mozilla\\.Thunderbird$";

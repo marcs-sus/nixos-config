@@ -20,6 +20,7 @@
 
       bar.default = {
         margin_ends = 50;
+        widget_spacing = 10;
 
         start = [
           "workspaces"
@@ -45,6 +46,15 @@
         hidden_tabs = [
           "power"
           "network"
+        ];
+
+        shortcuts = [
+          { type = "bluetooth"; }
+          { type = "caffeine"; }
+          { type = "nightlight"; }
+          { type = "notification"; }
+          { type = "wallpaper"; }
+          { type = "session"; }
         ];
       };
 
