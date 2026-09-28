@@ -1,7 +1,12 @@
 {
+  inputs,
   ...
 }:
 {
+  imports = [
+    inputs.nixos-hardware.nixosModules.gigabyte-b550
+  ];
+
   hardware = {
     cpu.amd.updateMicrocode = true;
     amdgpu.initrd.enable = true;
