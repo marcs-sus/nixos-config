@@ -7,14 +7,16 @@
 
     networkmanager.enable = true;
     nftables.enable = true;
-    firewall = rec {
-      allowedTCPPortRanges = [
-        {
-          from = 1714;
-          to = 1764;
-        }
+
+    firewall = {
+      enable = true;
+      nftables.enable = true;
+
+      allowedTCPPorts = [
+        80
+        443
+        22
       ];
-      allowedUDPPortRanges = allowedTCPPortRanges;
     };
 
     # Configure network proxy if necessary

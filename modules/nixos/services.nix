@@ -30,6 +30,7 @@
     };
 
     openssh.enable = true;
+    fail2ban.enable = true;
     gnome.gnome-keyring.enable = true;
     lact.enable = true;
     gvfs.enable = true;

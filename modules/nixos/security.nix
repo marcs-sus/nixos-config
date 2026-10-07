@@ -2,5 +2,9 @@
   ...
 }:
 {
-  security.polkit.enable = true;
+
+  security = {
+    polkit.enable = true;
+    apparmor.enable = true;
+  };
 }

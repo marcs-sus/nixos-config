@@ -54,7 +54,11 @@
       };
     };
 
-    localsend.enable = true;
+    localsend = {
+      enable = true;
+      openFirewall = true;
+    };
+
     dconf.enable = true;
   };
 }
