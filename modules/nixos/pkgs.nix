@@ -8,10 +8,8 @@
     pulseaudio
     pavucontrol
     brightnessctl
-    lact
     trash-cli
     file-roller
-    kitty
     vim
     tree
     neovim
@@ -23,18 +21,12 @@
     fastfetch
     nix-bash-completions
     brave-origin
-    vesktop
     ferdium
     vscodium.fhs
     mpv
     vlc
     imv
-    obsidian
-    keepassxc
     ente-auth
-    prismlauncher
-    gamemode
-    xdg-desktop-portal-gtk
     xwayland-satellite
     sbctl
     shellcheck

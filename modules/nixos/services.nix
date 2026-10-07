@@ -30,13 +30,10 @@
     };
 
     openssh.enable = true;
-
     gnome.gnome-keyring.enable = true;
-
+    lact.enable = true;
     gvfs.enable = true;
-
     tumbler.enable = true;
-
     printing.enable = true;
   };
 }

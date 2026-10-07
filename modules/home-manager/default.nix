@@ -7,6 +7,7 @@
     ./misc.nix
     ./niri.nix
     ./noctalia.nix
+    ./programs.nix
     ./shell.nix
     ./syncthing.nix
     ./stylix.nix
