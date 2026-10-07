@@ -10,7 +10,6 @@
 
     firewall = {
       enable = true;
-      nftables.enable = true;
 
       allowedTCPPorts = [
         80
