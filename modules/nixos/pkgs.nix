@@ -21,6 +21,7 @@
     fastfetch
     nix-bash-completions
     brave-origin
+    vesktop
     ferdium
     vscodium.fhs
     mpv
