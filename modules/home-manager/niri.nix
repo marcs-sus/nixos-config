@@ -8,6 +8,13 @@
         { argv = [ "noctalia" ]; }
       ];
 
+      outputs."HDMI-A-1" = {
+        mode = {
+          width = 1920;
+          height = 1080;
+        };
+      };
+
       input = {
         keyboard.xkb = {
           layout = "br";
