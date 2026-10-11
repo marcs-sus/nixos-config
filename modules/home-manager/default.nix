@@ -7,6 +7,7 @@
     ./misc.nix
     ./niri.nix
     ./noctalia.nix
+    ./pkgs.nix
     ./programs.nix
     ./shell.nix
     ./syncthing.nix

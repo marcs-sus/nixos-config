@@ -1,0 +1,20 @@
+{
+  pkgs,
+  ...
+}:
+{
+  home.packages = with pkgs; [
+    pavucontrol
+    brave-origin
+    vesktop
+    ferdium
+    vscodium.fhs
+    mpv
+    vlc
+    imv
+    ente-auth
+    xwayland-satellite
+    retroarch-assets
+    libretro-core-info
+  ];
+}

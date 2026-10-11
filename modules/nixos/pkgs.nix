@@ -6,13 +6,12 @@
   environment.systemPackages = with pkgs; [
     tuigreet
     pulseaudio
-    pavucontrol
     brightnessctl
     trash-cli
     file-roller
     vim
-    tree
     neovim
+    tree
     wget
     curl
     ripgrep
@@ -20,15 +19,6 @@
     gh
     fastfetch
     nix-bash-completions
-    brave-origin
-    vesktop
-    ferdium
-    vscodium.fhs
-    mpv
-    vlc
-    imv
-    ente-auth
-    xwayland-satellite
     sbctl
     shellcheck
     nixfmt

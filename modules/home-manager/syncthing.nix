@@ -28,6 +28,7 @@
             params.keep = "5";
           };
         };
+
         "Obsidian Vaults" = {
           id = "obsidian-vaults";
           path = "/home/marcos/Documents/Obsidian-Vaults";
@@ -40,6 +41,20 @@
             params.keep = "5";
           };
         };
+
+        "RetroArch Game Saves" = {
+          id = "retroarch-saves";
+          path = "/home/marcos/.config/retroarch/saves";
+          devices = [
+            "laptop"
+            "phone"
+          ];
+          versioning = {
+            type = "simple";
+            params.keep = "5";
+          };
+        };
+
         "Prism Launcher Instances" = {
           id = "prism-launcher";
           path = "/home/marcos/.local/share/PrismLauncher/instances";

@@ -54,6 +54,28 @@
       };
     };
 
+    retroarch = {
+      enable = true;
+      cores = {
+        mesen.enable = true;
+        snes9x.enable = true;
+        mgba.enable = true;
+        mupen64plus.enable = true;
+        melonds.enable = true;
+        dolphin.enable = true;
+        genesis-plus-gx.enable = true;
+        fbneo.enable = true;
+      };
+
+      settings = {
+        video_driver = "vulkan";
+        menu_driver = "xmb";
+        menu_show_core_updater = "false";
+        menu_show_online_updater = "true";
+        video_fullscreen = "true";
+      };
+    };
+
     obsidian.enable = true;
     prismlauncher.enable = true;
   };
