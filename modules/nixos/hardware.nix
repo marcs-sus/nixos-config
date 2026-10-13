@@ -10,6 +10,7 @@
   hardware = {
     cpu.amd.updateMicrocode = true;
     amdgpu.initrd.enable = true;
+    xone.enable = true;
 
     graphics = {
       enable = true;
