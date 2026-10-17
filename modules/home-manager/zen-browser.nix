@@ -1,79 +1,99 @@
 {
   inputs,
-  pkgs,
-  lib,
   ...
 }:
 let
   extension = shortId: guid: {
     name = guid;
     value = {
-      install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/${shortId}/latest.xpi";
+      install_url = "https://addons.mozilla.org/firefox/downloads/latest/${shortId}/latest.xpi";
       installation_mode = "normal_installed";
     };
   };
 
-  prefs = {
-    # Check these out at about:config
-    "extensions.autoDisableScopes" = 0;
-    "extensions.pocket.enabled" = false;
-  };
-
   extensions = [
-    # To add additional extensions, find it on addons.mozilla.org, find
-    # the short ID in the url (like https://addons.mozilla.org/en-US/firefox/addon/!SHORT_ID!/)
-    # Then go to https://addons.mozilla.org/api/v5/addons/addon/!SHORT_ID!/ to get the guid
     (extension "ublock-origin" "uBlock0@raymondhill.net")
     (extension "keepassxc-browser" "keepassxc-browser@keepassxc.org")
     (extension "dark" "{793d9e3d-5bf2-4e98-8b4a-dada04364160}")
   ];
 in
 {
-  home.packages = [
-    (pkgs.wrapFirefox
-      inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.zen-browser-unwrapped
-      {
-        extraPrefs = lib.concatLines (
-          lib.mapAttrsToList (
-            name: value: "lockPref(${lib.strings.toJSON name}, ${lib.strings.toJSON value});"
-          ) prefs
-        );
+  imports = [
+    inputs.zen-browser.homeModules.beta
+  ];
 
-        extraPolicies = {
-          DisableTelemetry = true;
-          ExtensionSettings = builtins.listToAttrs extensions;
+  programs.zen-browser = {
+    enable = true;
 
-          SearchEngines = {
-            Default = "ddg";
-            Add = [
+    policies = {
+      DisableTelemetry = true;
+
+      ExtensionSettings = builtins.listToAttrs extensions;
+
+      Preferences = {
+        "extensions.autoDisableScopes" = {
+          Value = 0;
+          Status = "locked";
+        };
+
+        "extensions.pocket.enabled" = {
+          Value = false;
+          Status = "locked";
+        };
+      };
+    };
+
+    profiles.default = {
+      search = {
+        force = true;
+        default = "ddg";
+
+        engines = {
+          nixpkgs = {
+            name = "nixpkgs packages";
+            urls = [
               {
-                Name = "nixpkgs packages";
-                URLTemplate = "https://search.nixos.org/packages?query={searchTerms}";
-                IconURL = "https://wiki.nixos.org/favicon.ico";
-                Alias = "@np";
-              }
-              {
-                Name = "NixOS options";
-                URLTemplate = "https://search.nixos.org/options?query={searchTerms}";
-                IconURL = "https://wiki.nixos.org/favicon.ico";
-                Alias = "@no";
-              }
-              {
-                Name = "NixOS Wiki";
-                URLTemplate = "https://wiki.nixos.org/w/index.php?search={searchTerms}";
-                IconURL = "https://wiki.nixos.org/favicon.ico";
-                Alias = "@nw";
-              }
-              {
-                Name = "noogle";
-                URLTemplate = "https://noogle.dev/q?term={searchTerms}";
-                IconURL = "https://noogle.dev/favicon.ico";
-                Alias = "@ng";
+                template = "https://search.nixos.org/packages?query={searchTerms}";
               }
             ];
+            icon = "https://wiki.nixos.org/favicon.ico";
+            definedAliases = [ "@np" ];
+          };
+
+          nixos-options = {
+            name = "NixOS options";
+            urls = [
+              {
+                template = "https://search.nixos.org/options?query={searchTerms}";
+              }
+            ];
+            icon = "https://wiki.nixos.org/favicon.ico";
+            definedAliases = [ "@no" ];
+          };
+
+          nixos-wiki = {
+            name = "NixOS Wiki";
+            urls = [
+              {
+                template = "https://wiki.nixos.org/w/index.php?search={searchTerms}";
+              }
+            ];
+            icon = "https://wiki.nixos.org/favicon.ico";
+            definedAliases = [ "@nw" ];
+          };
+
+          noogle = {
+            name = "noogle";
+            urls = [
+              {
+                template = "https://noogle.dev/q?term={searchTerms}";
+              }
+            ];
+            icon = "https://noogle.dev/favicon.ico";
+            definedAliases = [ "@ng" ];
           };
         };
-      }
-    )
-  ];
+      };
+    };
+  };
 }
