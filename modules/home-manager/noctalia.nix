@@ -84,14 +84,15 @@
         behavior = {
           screen-off = {
             enabled = true;
-            timeout = 600;
+            timeout = 1200;
             action = "screen_off";
           };
 
           suspend = {
             enabled = true;
-            timeout = 1200;
+            timeout = 2400;
             action = "suspend";
+            lock_before_suspend = false;
           };
         };
       };

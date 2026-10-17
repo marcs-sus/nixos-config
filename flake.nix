@@ -67,7 +67,6 @@
             home-manager.nixosModules.default
             {
               home-manager = {
-                useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.marcos = ./users/marcos/home.nix;
