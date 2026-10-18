@@ -4,6 +4,11 @@
 {
   nix = {
     settings = {
+      trusted-users = [
+        "root"
+        "marcos"
+      ];
+
       experimental-features = [
         "nix-command"
         "flakes"

@@ -76,6 +76,11 @@
       };
     };
 
+    gh = {
+      enable = true;
+      gitCredentialHelper.enable = true;
+    };
+
     obsidian.enable = true;
     prismlauncher.enable = true;
   };

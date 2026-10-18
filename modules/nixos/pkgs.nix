@@ -16,7 +16,6 @@
     curl
     ripgrep
     git
-    gh
     fastfetch
     nix-bash-completions
     sbctl

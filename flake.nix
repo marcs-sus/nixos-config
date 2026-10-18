@@ -63,7 +63,10 @@
         desktop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
 
-          specialArgs = { inherit inputs; };
+          specialArgs = {
+            inherit inputs;
+            modulesDir = ./modules/nixos;
+          };
           modules = [
             ./hosts/desktop/configuration.nix
 
@@ -71,7 +74,11 @@
             {
               home-manager = {
                 useUserPackages = true;
-                extraSpecialArgs = { inherit inputs; };
+                extraSpecialArgs = {
+                  inherit inputs;
+                  modulesDir = ./modules/home-manager;
+                };
+
                 users.marcos = ./users/marcos/home.nix;
               };
             }

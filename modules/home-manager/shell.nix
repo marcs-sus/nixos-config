@@ -19,6 +19,7 @@
 
       shellAliases = {
         rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config#desktop";
+        update = "nix flake update --flake ~/nixos-config";
         ls = "ls --color=auto";
         dir = "dir --color=auto";
         vdir = "vdir --color=auto";
