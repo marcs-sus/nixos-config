@@ -11,6 +11,7 @@
     cpu.amd.updateMicrocode = true;
     amdgpu.initrd.enable = true;
     xone.enable = true;
+    xpad-noone.enable = false;
 
     graphics = {
       enable = true;
