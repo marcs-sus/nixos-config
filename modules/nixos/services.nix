@@ -29,6 +29,7 @@
       pulse.enable = true;
     };
 
+    fwupd.enable = true;
     openssh.enable = true;
     fail2ban.enable = true;
     gnome.gnome-keyring.enable = true;

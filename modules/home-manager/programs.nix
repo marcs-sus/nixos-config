@@ -81,6 +81,26 @@
       gitCredentialHelper.enable = true;
     };
 
+    topgrade = {
+      enable = true;
+
+      settings = {
+        commands = {
+          "Nix Garbage Collect" = "nix-collect-garbage --delete-older-than 7d";
+        };
+
+        misc = {
+          cleanup = true;
+          disable = [
+            "system"
+            "nix"
+          ];
+        };
+
+        firmware.upgrade = false;
+      };
+    };
+
     obsidian.enable = true;
     prismlauncher.enable = true;
   };
