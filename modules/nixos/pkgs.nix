@@ -9,6 +9,7 @@
     brightnessctl
     trash-cli
     file-roller
+    baobab
     vim
     neovim
     tree
