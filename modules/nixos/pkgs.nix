@@ -27,6 +27,7 @@
     nix-bash-completions
     sbctl
     shellcheck
+    xdg-utils
     nixfmt
     nil
   ];
