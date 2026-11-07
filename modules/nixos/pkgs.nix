@@ -1,8 +1,13 @@
 {
+  inputs,
   pkgs,
   ...
 }:
 {
+  imports = [
+    inputs.brave.nixosModules.default
+  ];
+
   environment.systemPackages = with pkgs; [
     tuigreet
     pulseaudio
@@ -10,6 +15,7 @@
     trash-cli
     file-roller
     baobab
+    brave-origin
     vim
     neovim
     tree

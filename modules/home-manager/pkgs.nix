@@ -5,7 +5,6 @@
 {
   home.packages = with pkgs; [
     pavucontrol
-    brave-origin
     vesktop
     ferdium
     vscodium.fhs

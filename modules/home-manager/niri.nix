@@ -48,11 +48,11 @@
           width = 2;
 
           active = {
-            color = "#7fc8ff";
+            color = "#7aa2f7";
           };
 
           inactive = {
-            color = "#505050";
+            color = "#565f89";
           };
         };
 
@@ -60,15 +60,15 @@
           width = 2;
 
           active = {
-            color = "#ffc87f";
+            color = "#bb9af7";
           };
 
           inactive = {
-            color = "#505050";
+            color = "#414868";
           };
 
           urgent = {
-            color = "#9b0000";
+            color = "#f7768e";
           };
         };
 

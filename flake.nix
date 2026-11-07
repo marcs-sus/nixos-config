@@ -47,6 +47,12 @@
         home-manager.follows = "home-manager";
       };
     };
+
+    # Brave
+    brave = {
+      url = "git+https://codeberg.org/buckley310/brave-browser-nix?ref=main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
