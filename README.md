@@ -24,6 +24,7 @@ nixos-config
 │   │   ├── shell.nix
 │   │   ├── stylix.nix
 │   │   ├── syncthing.nix
+│   │   ├── xdg.nix
 │   │   └── zen-browser.nix
 │   └── nixos
 │       ├── boot.nix
@@ -36,8 +37,7 @@ nixos-config
 │       ├── programs.nix
 │       ├── security.nix
 │       ├── services.nix
-│       ├── users.nix
-│       └── xdg.nix
+│       └── users.nix
 ├── README.md
 └── users
     └── marcos
