@@ -17,6 +17,10 @@
         22
       ];
 
+      allowedUDPPorts = [
+        9
+      ];
+
       allowedTCPPortRanges = [
         {
           from = 1714;
@@ -29,6 +33,10 @@
           to = 1764;
         }
       ];
+    };
+
+    interfaces.enp7s0 = {
+      wakeOnLan.enable = true;
     };
 
     # Configure network proxy if necessary
