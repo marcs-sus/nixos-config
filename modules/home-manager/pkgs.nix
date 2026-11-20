@@ -7,6 +7,7 @@
     pavucontrol
     vesktop
     ferdium
+    brave-origin
     vscodium.fhs
     mpv
     vlc
