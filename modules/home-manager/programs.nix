@@ -105,6 +105,7 @@
     qalculate.enable = true;
     obs-studio.enable = true;
     obsidian.enable = true;
+    yt-dlp.enable = true;
     prismlauncher.enable = true;
   };
 }

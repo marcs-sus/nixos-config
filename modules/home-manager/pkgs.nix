@@ -16,6 +16,7 @@
     mpv
     vlc
     imv
+    imagemagick
     kdePackages.kate
     kdePackages.okular
     kdePackages.kolourpaint
