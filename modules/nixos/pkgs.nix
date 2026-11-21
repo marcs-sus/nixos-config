@@ -10,9 +10,9 @@
     brightnessctl
     trash-cli
     file-roller
+    bleachbit
     baobab
     vim
-    neovim
     tree
     wget
     curl

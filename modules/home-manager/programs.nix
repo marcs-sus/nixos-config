@@ -101,6 +101,9 @@
       };
     };
 
+    neovim.enable = true;
+    qalculate.enable = true;
+    obs-studio.enable = true;
     obsidian.enable = true;
     prismlauncher.enable = true;
   };

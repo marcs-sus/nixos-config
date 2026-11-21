@@ -5,15 +5,23 @@
 {
   home.packages = with pkgs; [
     pavucontrol
+    blueman
+    mission-center
     vesktop
     ferdium
     brave-origin
     vscodium.fhs
+    godot-mono
+    gimp
     mpv
     vlc
     imv
+    kdePackages.kate
+    kdePackages.okular
+    kdePackages.kolourpaint
     ente-auth
     xwayland-satellite
+    heroic
     retroarch-assets
     libretro-core-info
   ];
