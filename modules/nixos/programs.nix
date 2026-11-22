@@ -59,6 +59,11 @@
       openFirewall = true;
     };
 
+    gnupg.agent.enable = true;
     dconf.enable = true;
+    nix-ld.enable = true;
+    nh.enable = true;
+    nix-index.enable = true;
+    comma.enable = true;
   };
 }

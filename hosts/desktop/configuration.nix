@@ -15,6 +15,8 @@
     keyMap = "br-abnt2";
   };
 
+  zramSwap.enable = true;
+
   nixpkgs = {
     config.allowUnfree = true;
   };

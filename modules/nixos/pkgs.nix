@@ -25,5 +25,7 @@
     xdg-utils
     nixfmt
     nil
+    alejandra
+    statix
   ];
 }
